@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { ThemeContext } from './contexts/ThemeContext';
 
 export default class extends Component {
+  static contextType = ThemeContext;
   render() {
+    const { isDarkMode } = this.context;
     const styles = {
-      background: 'white',
+      background: isDarkMode ? 'black' : 'white',
       width: '100vw',
       height: '100vh',
     };
