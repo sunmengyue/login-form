@@ -27,7 +27,7 @@ const content = {
 };
 
 function Navbar(props) {
-  const { isDarkMode, toggleTheme } = this.context;
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const { classes } = props;
   const { search, flag } = content[language];
